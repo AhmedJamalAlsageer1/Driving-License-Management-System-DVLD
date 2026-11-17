@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DFC3A93A-189C-489B-BC0C-18D59C168540}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DVLDBisnessLayer</RootNamespace>
+    <AssemblyName>DVLDBisnessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DVLD.DTOs">
+      <HintPath>..\DVLD.DTOs\bin\Debug\DVLD.DTOs.dll</HintPath>
+    </Reference>
+    <Reference Include="DVLDDataAccessLayer">
+      <HintPath>..\DVLDDataAccessLayer\bin\Debug\DVLDDataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="SharedLayer">
+      <HintPath>..\SharedLayer\bin\Debug\SharedLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseLicenseRequest\clsBaseApplication_BL.cs" />
+    <Compile Include="LDL_App\cls_LDLApplication_Service_BL.cs" />
+    <Compile Include="LDL_App\Update_LDL_Application\cls_Update_LDLApplication_BL.cs" />
+    <Compile Include="License\clsBaseLicense_BL.cs" />
+    <Compile Include="License\Int_L_Request\cls_IntLicenseExpirationManager_BL.cs" />
+    <Compile Include="License\Int_L_Request\cls_IntLicenseService_BL.cs" />
+    <Compile Include="License\Int_L_Request\Int License\cls_Base_IntLicense_BL.cs" />
+    <Compile Include="License\Int_L_Request\Int License\New_IntLicense\cls_NewIntLicense_BL.cs" />
+    <Compile Include="License\Int_L_Request\Int License\ReNew_IntLicense\cls_RenewIntLicense_BL.cs" />
+    <Compile Include="License\Local_L_Request\cls_LocalLicenseExpirationManager_BL.cs" />
+    <Compile Include="License\Local_L_Request\Local License\cls_LocalLicenseBase.cs" />
+    <Compile Include="License\Local_L_Request\Local License\cls_LocalLicenseService_BL.cs" />
+    <Compile Include="License\Local_L_Request\Local License\Release Detained License\cls_ReleaseDetainedLicense_BL.cs" />
+    <Compile Include="PoliceService\clsRequestPoliceAction\cls_PoliceActionService_BL.cs" />
+    <Compile Include="PoliceService\clsRequestPoliceAction\Detain License\cls_DetainLicense_BL.cs" />
+    <Compile Include="License\Local_L_Request\Local License\New Local License\cls_New_LocalLicense_BL.cs" />
+    <Compile Include="License\Local_L_Request\Local License\ReNew Local License\cls_Renew_LocalLicense_BL.cs" />
+    <Compile Include="LDL_App\cls_LDL_ApplicationRequest_BL.cs" />
+    <Compile Include="License\Local_L_Request\Local License\Replacement For\cls_ReplacementLocalLicense_BL.cs" />
+    <Compile Include="PoliceService\clsRequestPoliceAction\cls_RequestPoliceAction_BL.cs" />
+    <Compile Include="Presentation BL\Driver\clsDriverInfo_BL.cs" />
+    <Compile Include="GeneralHelpers\SplitText.cs" />
+    <Compile Include="Presentation BL\Int License\clsShow_IntLicense_BL.cs" />
+    <Compile Include="Presentation BL\Int License\cls_DriverInternationalLicenseInfo_BL.cs" />
+    <Compile Include="Presentation BL\Local License\Release Detained License\cls_ReleaseDetainedLicense_Info.cs" />
+    <Compile Include="Presentation BL\Police Server\Detain License\cls_DetainLicense_Info.cs" />
+    <Compile Include="Presentation BL\Local License\Renew\cls_RenewLicense_Info.cs" />
+    <Compile Include="Presentation BL\Local License\Replacement\cls_ApplicationReplacement_Info.cs" />
+    <Compile Include="Presentation BL\New Local Driving Application\clsApplicationDisplayBL.cs" />
+    <Compile Include="Business Context\Application Types\clsApplicationTypesBL.cs" />
+    <Compile Include="License\Int_L_Request\cls_IntLicenseRequest_BL.cs" />
+    <Compile Include="Business Context\clsLicenseClassesBL.cs" />
+    <Compile Include="Business Context\Person\clsPerson.cs" />
+    <Compile Include="Business Context\Driver\clsDriver_BL.cs" />
+    <Compile Include="Presentation BL\Local License\clsLicenseDriverInfo_BL.cs" />
+    <Compile Include="License\Local_L_Request\cls_LocalLicenseRequest_BL.cs" />
+    <Compile Include="Presentation BL\Local License\clsLicensesHistory_BL.cs" />
+    <Compile Include="Business Context\TestAppointment\AppointmentLockManagerBL.cs" />
+    <Compile Include="Business Context\TestAppointment\clsTestAppointmentBL.cs" />
+    <Compile Include="Presentation BL\New Local Driving Application\cls_FindApplicationInfo.cs" />
+    <Compile Include="Presentation BL\Police Server\Detain License\cls_ShowDetainedLicenses_BL.cs" />
+    <Compile Include="Presentation BL\TestAppointment\clsTestAppointmentInfoBL.cs" />
+    <Compile Include="LDL_App\New_LDL_Application\cls_NewLDLApp_BL.cs" />
+    <Compile Include="Business Context\Test\clsTestProgressBL.cs" />
+    <Compile Include="Business Context\Test\clsTestTypes.cs" />
+    <Compile Include="clsUser.cs" />
+    <Compile Include="Presentation BL\User\clsUserInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Business Context\Test\clsTestBL.cs" />
+    <Compile Include="Rules\LocalLicense\NewLocalLicenseRules.cs" />
+    <Compile Include="Rules\LocalLicense\RenewLicenseRules.cs" />
+    <Compile Include="Validation\FieldError.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presentation BL\Test\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

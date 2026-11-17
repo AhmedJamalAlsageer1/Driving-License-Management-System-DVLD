@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AD38CF3-DBED-4FBC-9F25-7CCDD91C2B97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DVLD.DTOs</RootNamespace>
+    <AssemblyName>DVLD.DTOs</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharedLayer">
+      <HintPath>..\SharedLayer\bin\Debug\SharedLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\DTO_Application_Info.cs" />
+    <Compile Include="Police Actions\Detain License\DTO_DetainLicense.cs" />
+    <Compile Include="Police Actions\I_PoliceRequest.cs" />
+    <Compile Include="License\Int License\DTO_IntLicenseRequirements.cs" />
+    <Compile Include="License\Int License\DTO_ReNewLocalLicense\DTO_RenewIntLicense.cs" />
+    <Compile Include="License\Int License\I_IntLicense.cs" />
+    <Compile Include="License\LDL Application\I_LDL_Application.cs" />
+    <Compile Include="License\Local License\I_LocalLicense.cs" />
+    <Compile Include="License\Local License\New Local License\DTO_NewLicenseRequirements_BL.cs" />
+    <Compile Include="License\Local License\Release Detained License\DTO_ReleaseDetainedLicense.cs" />
+    <Compile Include="License\Local License\Replacement For\DTO_Replacement_LocalLicense.cs" />
+    <Compile Include="License\Local License\Release Detained License\DTO_ReleaseLicenseRequirements.cs" />
+    <Compile Include="Presention DTO\Licnese\Local License Application\DTO_LDLApplicationsDisplay.cs" />
+    <Compile Include="Presention DTO\Licnese\Local License Application\DTO_LDLFull_Info.cs" />
+    <Compile Include="DTO Context\Drivers\DTODrivers_Info.cs" />
+    <Compile Include="Presention DTO\Licnese\Local License Application\DTO_New_LDL_App_Config.cs" />
+    <Compile Include="License\LDL Application\New_LDL_Application\DTO_LDL_App.cs" />
+    <Compile Include="DTOComboBoxItem.cs" />
+    <Compile Include="DTOTestTypes.cs" />
+    <Compile Include="DTOApplicationTypes.cs" />
+    <Compile Include="DTOPerson.cs" />
+    <Compile Include="DTOUser.cs" />
+    <Compile Include="DTOUserInfo.cs" />
+    <Compile Include="DTO Context\Drivers\DTODriver.cs" />
+    <Compile Include="Presention DTO\Licnese\Int_License\DTO_DriverInternationalLicenseInfo.cs" />
+    <Compile Include="License\Int License\DTO_NewIntLicense\DTO_IntLicense.cs" />
+    <Compile Include="Presention DTO\Licnese\Int_License\DTO_ShowIntLicenses.cs" />
+    <Compile Include="License\Local License\New Local License\DTO_LocalLicense.cs" />
+    <Compile Include="DTO Context\License Class\DTOLicenseClass.cs" />
+    <Compile Include="Presention DTO\Licnese\LocalLicense\Detain License\DTO_DetainLicense_Info.cs" />
+    <Compile Include="Presention DTO\Licnese\LocalLicense\DTOLicenseDriverInfo.cs" />
+    <Compile Include="Presention DTO\Licnese\Int_License\DTO_InternationalLicenseHistory.cs" />
+    <Compile Include="Presention DTO\Licnese\LocalLicense\DTO_LocalLicenseHistory.cs" />
+    <Compile Include="Presention DTO\Licnese\LocalLicense\Renew\DTO_RenewLicense_Config.cs" />
+    <Compile Include="Presention DTO\Licnese\LocalLicense\Renew\DTO_RenewLicense_Info.cs" />
+    <Compile Include="License\Local License\ReNew\DTO_Renew_LocalLicense.cs" />
+    <Compile Include="Presention DTO\Licnese\LocalLicense\Replacement\DTO_ApplicationReplacement_Info.cs" />
+    <Compile Include="Presention DTO\Licnese\Release Detain\DTO_ReleaseDetain_Info.cs" />
+    <Compile Include="Presention DTO\Police Actions\Detain License\DTO_ShowDetainedLicenses.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DTO Context\TestAppointment\DTODisplayTestAppointment.cs" />
+    <Compile Include="DTO Context\TestAppointment\DTOTestAppointment.cs" />
+    <Compile Include="DTO Context\TestAppointment\DTOTestAppointment_Init.cs" />
+    <Compile Include="DTO Context\Test\DTOTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="International License\" />
+    <Folder Include="Presention DTO\Licnese\LocalLicense\New Local License\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

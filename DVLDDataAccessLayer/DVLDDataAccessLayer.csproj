@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06E73679-D7B8-4BCA-88DC-69591D0CB157}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DVLDDataAccessLayer</RootNamespace>
+    <AssemblyName>DVLDDataAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DVLD.DTOs">
+      <HintPath>..\DVLD.DTOs\bin\Debug\DVLD.DTOs.dll</HintPath>
+    </Reference>
+    <Reference Include="SharedLayer">
+      <HintPath>..\SharedLayer\bin\Debug\SharedLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\cls_LDLApplication_DAL.cs" />
+    <Compile Include="clsApplicationTypesDAL.cs" />
+    <Compile Include="Driver\clsDriverInfo_DAL.cs" />
+    <Compile Include="InternationalLicense\clsDriverInternationalLicenseInfo_DAL.cs" />
+    <Compile Include="InternationalLicense\clsInternationalLicense_DAL.cs" />
+    <Compile Include="InternationalLicense\clsShow_IntLicense_DAL.cs" />
+    <Compile Include="License\clsLicenseClassesDAL.cs" />
+    <Compile Include="clsTestTypesDAL.cs" />
+    <Compile Include="HelperClass\clsCommenFunctions.cs" />
+    <Compile Include="clsPersonAccessLayer.cs" />
+    <Compile Include="clsDataAccessSetting.cs" />
+    <Compile Include="clsUserAccessLayer.cs" />
+    <Compile Include="clsUserInfoAccessLayer.cs" />
+    <Compile Include="HelperClass\clsMapReader.cs" />
+    <Compile Include="Application\LDL_ApplicationsDisplayDAL.cs" />
+    <Compile Include="Driver\clsDriver_DAL.cs" />
+    <Compile Include="License\clsLicenseDriverInfo.cs" />
+    <Compile Include="License\clsLocalLicense_DAL.cs" />
+    <Compile Include="License\LicensesHistory\clsLicensesHistory_DAL.cs" />
+    <Compile Include="License\ReNew_LDL\cls_RenewLDL_DAL.cs" />
+    <Compile Include="PoliceActions\cls_DetainLicense_DAL.cs" />
+    <Compile Include="PoliceActions\cls_ShowDetainedLicenses_DAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppointmentTest\clsTestAppointmentDAL.cs" />
+    <Compile Include="AppointmentTest\clsTestAppointmentInfoDAL.cs" />
+    <Compile Include="Test\TestsDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LDL_Application\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
